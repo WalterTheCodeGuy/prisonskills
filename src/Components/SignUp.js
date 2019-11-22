@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import "../styles2.css";
 import "../styles-custom.css";
 
-const MyTextInput = ({ label, ...props }) => {
+const FormInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
@@ -17,7 +17,7 @@ const MyTextInput = ({ label, ...props }) => {
   );
 };
 
-const MyCheckbox = ({ children, ...props }) => {
+const Checkbox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: "checkbox" });
   return (
     <>
@@ -41,6 +41,7 @@ const SignupForm = () => {
           firstName: "",
           lastName: "",
           email: "",
+          prisonName: "",
           acceptedTerms: false,
         }}
         validationSchema={Yup.object({
@@ -48,6 +49,9 @@ const SignupForm = () => {
             .min(15, "Must be 15 characters or less")
             .required("Required"),
           lastName: Yup.string()
+            .min(20, "Must be 20 characters or less")
+            .required("Required"),
+          prisonName: Yup.string()
             .min(20, "Must be 20 characters or less")
             .required("Required"),
           email: Yup.string()
@@ -65,27 +69,33 @@ const SignupForm = () => {
         }}
       >
         <Form>
-          <MyTextInput
+          <FormInput
             label="First Name"
             name="firstName"
             type="text"
             placeholder="Jane"
           />
-          <MyTextInput
+          <FormInput
             label="Last Name"
             name="lastName"
             type="text"
             placeholder="Doe"
           />
-          <MyTextInput
+          <FormInput
+            label="Prison Name"
+            name="prisonName"
+            type="text"
+            placeholder="My Prison"
+          />
+          <FormInput
             label="Email Address"
             name="email"
             type="email"
             placeholder="jane@myprison.com"
           />
-          <MyCheckbox name="acceptedTerms">
+          <Checkbox name="acceptedTerms">
             I accept the terms and conditions
-          </MyCheckbox>
+          </Checkbox>
 
           <button type="submit">Submit</button>
         </Form>
