@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro&display=swap");
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  background-color: whitecream;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(225, 225, 225, 0.5);
+}
+
+.logo {
+  width: 250px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  margin: 20px;
+  padding: 5px;
+  background-color: rgba(196, 196, 196, 0.4);
+  border-radius: 15px;
+  box-shadow: 5px 10px #888888; 
+}
+
+.card-title {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.card-subtitle {
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.image img {
+  padding-top: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.leave img {
+  width: 50px;
+  height: 50px;
+}
