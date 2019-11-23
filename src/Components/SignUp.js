@@ -46,13 +46,13 @@ const SignupForm = () => {
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
-            .min(15, "Must be 15 characters or less")
+            .min(3, "Must be 15 characters or less")
             .required("Required"),
           lastName: Yup.string()
-            .min(20, "Must be 20 characters or less")
+            .min(3, "Must be 20 characters or less")
             .required("Required"),
           prisonName: Yup.string()
-            .min(20, "Must be 20 characters or less")
+            .min(3, "Must be 20 characters or less")
             .required("Required"),
           email: Yup.string()
             .email("Invalid email addresss`")
