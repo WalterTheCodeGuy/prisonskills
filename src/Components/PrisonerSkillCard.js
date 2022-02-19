@@ -8,9 +8,9 @@ import check from '../img/check.png';
 import x from '../img/x.png';
 
 const PrisonerSkillCard = props => {
-  const [prisonerData, setPrisonerData] = useState(null)
   const prisonerId = parseInt(props.match.params.id)
-  
+  const [prisonerData, setPrisonerData] = useState(prisonerId)
+
   useEffect(() => {
     axios
       .get(`https://prisoner-skills-cj.herokuapp.com/api/prisoners/${prisonerId}/skills`)
